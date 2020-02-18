@@ -5,29 +5,28 @@ import java.util.Date;
 
 public class Seller implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
-	
+
 	private Integer id;
 	private String name;
 	private String email;
 	private Date bithDate;
 	private Double baseSalary;
 
-	private Sellerr sellerr;
+	private Department department;
 
 	public Seller() {
 
 	}
 
-	public Seller(Integer id, String name, String email, Date bithDate, Double baseSalary, Sellerr sellerr) {
+	public Seller(Integer id, String name, String email, Date bithDate, Double baseSalary, Department department) {
 
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.bithDate = bithDate;
 		this.baseSalary = baseSalary;
-		this.sellerr = sellerr;
+		this.department = department;
 	}
 
 	public Integer getId() {
@@ -70,12 +69,16 @@ public class Seller implements Serializable {
 		this.baseSalary = baseSalary;
 	}
 
-	public Sellerr getDepartment() {
-		return sellerr;
+	public Department getDepartment() {
+		return department;
 	}
 
-	public void setDepartment(Sellerr sellerr) {
-		this.sellerr = sellerr;
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	@Override
@@ -106,7 +109,7 @@ public class Seller implements Serializable {
 	@Override
 	public String toString() {
 		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", bithDate=" + bithDate + ", baseSalary="
-				+ baseSalary + ", department=" + sellerr + "]";
+				+ baseSalary + ", department=" + department + "]";
 	}
 
 }
